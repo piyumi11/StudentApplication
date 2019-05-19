@@ -1,0 +1,10 @@
+html, body{
+  font-family: Georgia, serif;
+}
+.app-header {
+    padding: 15px 15px 15px 0px;
+    text-shadow: 1px 1px 3px #c0c0c0;
+}
+.app-icon {
+  color: gray;
+}
