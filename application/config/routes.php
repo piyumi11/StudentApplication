@@ -68,4 +68,12 @@ $route['exam/goto_exam/(\d+)'] = 'exam/Exam_controller/goto_exam_view/$1';
 //Subjects
 $route['subject/subjects/(\d+)'] = 'subject/Sub_controller/subjects_view/$1';
 
+//account
+$route['account/signin_view'] = 'account/Account_controller/signin_view';
+$route['account/signin'] = 'account/Account_controller/signin';
+$route['account/login_view'] = 'account/Account_controller/login_view';
+$route['account/login'] = 'account/Account_controller/login';
+$route['account/logout'] = 'account/Account_controller/logout_view';
+$route['account/home'] = 'Stud_controller';
+
 $route['test'] = 'Test';

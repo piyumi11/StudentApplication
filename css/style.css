@@ -8,3 +8,7 @@ html, body{
 .app-icon {
   color: gray;
 }
+.app-common-header {
+  padding: 10px 10px 10px 10px;
+  float: right;
+}

@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <?php
-          echo "Name : ".$records[0]->name;
+          echo "Student name : ".$records[0]->name;
        ?>
     </div>
   </div>
