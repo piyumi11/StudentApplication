@@ -8,7 +8,6 @@
 
    <link rel = "stylesheet" type = "text/css"
     href = "<?php echo base_url(); ?>css/style.css">
-    <?php session_start(); ?>
 </head>
 <body>
   <div class="container">

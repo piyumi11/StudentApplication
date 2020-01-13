@@ -5,6 +5,7 @@
          parent::__construct();
          $this->load->helper('url');
          $this->load->helper('form');
+         $this->load->library('session');
          $this->load->database();
       }
 
@@ -27,9 +28,10 @@
         $query = $this->db->get("stud");
         $data['records'] = $query->result();
         $data['page_title'] = "All students list";
-        session_start();
-        $_SESSION = array();//unset all session variables
-        session_destroy();
+        
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('logged_in');
+        
         $this->load->view('common/header', $data);
         $this->load->view('Stud_view', $data);
       }
@@ -114,9 +116,9 @@
                $hashed_password = $records[0]->password;
                if(password_verify($password, $hashed_password)){
 
-                 session_start();
-                 $_SESSION["loggedin"] = true;
-                 $_SESSION["username"] = $username;
+                   $this->session->set_userdata('loggedin', true);
+                   $this->session->set_userdata('username', $username);
+                   
                  header("location: home");
 
                } else {

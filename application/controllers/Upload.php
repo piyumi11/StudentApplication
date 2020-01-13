@@ -4,6 +4,7 @@
 
       public function __construct() {
          parent::__construct();
+         $this->load->library('session');
          $this->load->helper(array('form', 'url'));
       }
 
