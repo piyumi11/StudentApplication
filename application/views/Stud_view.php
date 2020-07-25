@@ -3,6 +3,9 @@
   <div class="row">
     <a class ='app-icon' href = "<?php echo base_url();?>index.php/stud/add_view">Add new student</a>
   </div>
+  <div>
+  	<a class ='app-icon' href = "<?php echo base_url();?>index.php/stud/pdf"  target="blanck"><i class="fas fa-file-pdf"></i></a>
+  </div>
     <div class="row">
       <table border = "1" class="table table-bordered">
          <?php

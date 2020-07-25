@@ -7,6 +7,7 @@
          $this->load->helper('form');
          $this->load->library('session');
          $this->load->database();
+         //$this->load->helper('pdf_helper'); // tcpdf helper
       }
 
       public function index() {
@@ -18,7 +19,17 @@
          $this->load->view('common/header', $data);
          $this->load->view('Stud_view', $data);
       }
-
+      
+      public function pdf_report() {
+          $this->load->helper('pdf_helper');
+          tcpdf();
+          $query = $this->db->get("stud");
+          $data['records'] = $query->result();
+          $data['page_title'] = "All students list";
+          
+          $this->load->view('pdf_report', $data);
+      }
+      
       public function add_student_view() {
 
          $data['page_title'] = "Add Students";
